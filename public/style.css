@@ -1,0 +1,41 @@
+/* Custom styles beyond Bootstrap */
+.card {
+  border-radius: 0.5rem;
+  border: none;
+}
+
+#urlInput {
+  border-right: none;
+}
+
+#submitBtn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#destinationUrl {
+  cursor: text;
+  background-color: #f8f9fa;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #212529;
+    color: #f8f9fa;
+  }
+  
+  .card {
+    background-color: #2c3034;
+  }
+  
+  .form-control, .form-control:focus {
+    background-color: #2c3034;
+    color: #f8f9fa;
+    border-color: #495057;
+  }
+  
+  #destinationUrl {
+    background-color: #343a40;
+  }
+}
