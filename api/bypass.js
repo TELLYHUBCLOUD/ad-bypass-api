@@ -2,6 +2,8 @@ import { processUrl } from './utils/puppeteer';
 import { followRedirects } from './utils/redirects';
 import cors from 'cors';
 
+const config = require('../../lib/constants');
+
 export default async (req, res) => {
   // Enable CORS
   cors()(req, res, async () => {
