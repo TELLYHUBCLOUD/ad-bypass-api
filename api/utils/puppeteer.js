@@ -1,6 +1,19 @@
 import chrome from 'chrome-aws-lambda';
 import puppeteer from 'puppeteer-core';
 
+export async function getBrowser() {
+  const options = {
+    args: chrome.args,
+    executablePath: await chrome.executablePath,
+    headless: chrome.headless,
+    defaultViewport: chrome.defaultViewport,
+    ignoreHTTPSErrors: true
+  };
+
+  return await puppeteer.launch(options);
+}
+
+// Rest of your existing code...
 export async function processUrl(url) {
   let browser = null;
   
