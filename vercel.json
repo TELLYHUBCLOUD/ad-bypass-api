@@ -3,7 +3,14 @@
   "builds": [
     {
       "src": "api/bypass.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "lib/**",
+          "node_modules/chrome-aws-lambda/**",
+          "node_modules/puppeteer-core/**"
+        ]
+      }
     }
   ],
   "routes": [
@@ -12,8 +19,8 @@
       "dest": "/api/bypass"
     },
     {
-      "src": "/",
-      "dest": "/public/index.html"
+      "src": "/(.*)",
+      "dest": "/public/$1"
     }
   ]
 }
