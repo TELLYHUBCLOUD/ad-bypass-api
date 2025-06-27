@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "public": true,
+  "regions": ["iad1"],
+  "build": {
+    "env": {
+      "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true"
+    }
+  }
+}
